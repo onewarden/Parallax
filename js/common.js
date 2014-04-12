@@ -40,8 +40,8 @@
                     _mPlatform = $('#m-platform').offset().top - 60,
                     _mResearch = $('#m-research').offset().top - 60,
                     _mResolve = $('#m-resolve').offset().top - 60,
-                    _mCase = $('#m-case').offset().top - 60,
-                    _mPartners = $('#m-partners').offset().top - 60;
+                    _mCase = $('#m-case').offset().top - 60;
+                    //_mPartners = $('#m-partners').offset().top - 60;
                 var $doc = $(document);
                 if($doc.scrollTop() >= _mIndex && $doc.scrollTop() < _mIntro){
                     $('#homebody').attr('data-index', 0);
@@ -61,13 +61,13 @@
                 } else if ($doc.scrollTop() >= _mResolve && $doc.scrollTop() < _mCase) {
                     $('#homebody').attr('data-index', 5);
                     $('#home-nav').find('a').removeClass('current').eq(5).addClass('current');
-                } else if ($doc.scrollTop() >= _mCase && $doc.scrollTop() < _mPartners) {
+                } else if ($doc.scrollTop() >= _mCase ) { //&& $doc.scrollTop() < _mPartners
                     $('#homebody').attr('data-index', 6);
                     $('#home-nav').find('a').removeClass('current').eq(6).addClass('current');
-                }   else if ($doc.scrollTop() >= _mPartners) {
+                }/*   else if ($doc.scrollTop() >= _mPartners) {
                     $('#homebody').attr('data-index', 7);
                     $('#home-nav').find('a').removeClass('current').eq(7).addClass('current');
-                }
+                }*/
 
 
             });
@@ -109,7 +109,7 @@
                         }
                         break;
                     case 'next':
-                        if (_index < 7 ) {
+                        if (_index < 6 ) {
                             var _bst = ($('.m-block').eq(_index+1).offset().top - 60)+'px';
                             $html.animate({scrollTop: _bst}, 400);
                             $hb.attr('data-index', _index+1);
@@ -273,7 +273,4 @@ $(function(){
     $('#mres-gar').parallax("50%", 0.7);
     $('#mres-logo').parallax("50%", 0-0.5);
     $('#mres-glass').parallax("50%", 0.5);
-    $('#mc-logo-tv').parallax("40%", 0.3);
-    $('#mc-logo-pc').parallax("50%", 0.5);
-    $('#mc-logo-pad').parallax("50%", 0.4);
 })

@@ -70,7 +70,7 @@ a:hover {color:#333;text-decoration:none;}
 /* =S home main */
 .bg-fixed { background-attachment: fixed;}
 .m-index { height: 797px; background: url("../images/chameleon.png") no-repeat scroll 10% 100% transparent;}
-.m-intro { height: 653px; background: url("../images/id-intro-bg.jpg") no-repeat scroll center 50px;}
+.m-intro { height: 653px; background: url("../images/id-intro-bg.png") no-repeat scroll center 50px;}
 .m-service { height: 725px; }
 .m-research { height: 644px; background: url(../images/bg-home-main-research.png) no-repeat center; }
 .m-platform { height: 619px; background: url(../images/bg-home-main-platform.png) no-repeat center;}
